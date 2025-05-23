@@ -1,0 +1,26 @@
+{
+  "name": "baymirr.com",
+  "version": "1.0.0",
+  "description": "Bay City Mirror",
+  "homepage": "https://github.com/TheSeg/baymirr.com#readme",
+  "bugs": {
+    "url": "https://github.com/TheSeg/baymirr.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSeg/baymirr.com.git"
+  },
+  "license": "ISC",
+  "author": "John *Seg* Seggerson",
+  "scripts": {
+    "serve": "vite serve",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.6",
+    "sass-embedded": "^1.89.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
