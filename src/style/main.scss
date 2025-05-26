@@ -1,6 +1,35 @@
 @import "bootstrap/scss/bootstrap";
 
+$bcm-header-side-a-bg: #6B5C5D;
+$bcm-header-side-a-color: #FFF;
+$bcm-header-side-b-bg: #B9A1A1;
+$bcm-header-side-b-color: #000;
+
 body {
   --bs-body-bg: #EEE;
   --bs-body-font-family: var(--bs-font-monospace);
+}
+
+.bcm-header {
+  .side-a {
+    background-color: $bcm-header-side-a-bg;
+    color: $bcm-header-side-a-color;
+  }
+  .connector {
+    background-color: $bcm-header-side-a-bg;
+    background: linear-gradient(145deg,$bcm-header-side-a-bg 0%, $bcm-header-side-a-bg 50%, $bcm-header-side-b-bg 50%, $bcm-header-side-b-bg 100%);
+    // .connector-a {
+    //   background-color: $bcm-header-side-a-bg;
+    //   transform: skew(-45deg);
+    // }
+    // .connector-b {
+    //   background-color: $bcm-header-side-b-bg;
+    //   transform: skew(-45deg);
+    // }
+  }
+  .side-b {
+    background-color: $bcm-header-side-b-bg;
+    color: $bcm-header-side-b-color;
+    transform: rotate(0.5turn);
+  }
 }
