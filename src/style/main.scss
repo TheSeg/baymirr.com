@@ -18,18 +18,43 @@ body {
   .connector {
     background-color: $bcm-header-side-a-bg;
     background: linear-gradient(145deg,$bcm-header-side-a-bg 0%, $bcm-header-side-a-bg 50%, $bcm-header-side-b-bg 50%, $bcm-header-side-b-bg 100%);
-    // .connector-a {
-    //   background-color: $bcm-header-side-a-bg;
-    //   transform: skew(-45deg);
-    // }
-    // .connector-b {
-    //   background-color: $bcm-header-side-b-bg;
-    //   transform: skew(-45deg);
-    // }
   }
   .side-b {
     background-color: $bcm-header-side-b-bg;
     color: $bcm-header-side-b-color;
     transform: rotate(0.5turn);
+    line-height: 1;
+  }
+}
+
+.section {
+  margin: (1 * $spacer);
+  margin-bottom: (0 * $spacer);
+  h2 {
+    border-bottom: 5px solid black;
+    text-transform: uppercase;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 800;
+    padding-left: $spacer;
+  }
+}
+
+@for $i from 1 through 4 {
+  .content-cols-#{$i} {
+    @include media-breakpoint-up(lg) {
+      column-count: $i;
+    }
+    text-wrap: pretty;
+    p {
+      text-indent: (1.5 * $spacer);
+      margin-bottom: (.25 * $spacer);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      padding-inline-start: (0.85 * $spacer);
+    }
   }
 }
