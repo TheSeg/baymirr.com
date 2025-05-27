@@ -42,8 +42,9 @@ body {
 
 @for $i from 1 through 4 {
   .content-cols-#{$i} {
-    column-count: $i;
-    // text-align: justify;
+    @include media-breakpoint-up(lg) {
+      column-count: $i;
+    }
     text-wrap: pretty;
     p {
       text-indent: (1.5 * $spacer);
